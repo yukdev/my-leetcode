@@ -27,7 +27,7 @@ function twoSum(nums, target) {
 /**
  * o(n) solution using hashmap
  */
-function twoSum2(nums, target) {
+function twoSum(nums, target) {
   const cache = new Map();
 
   for (let i = 0; i < nums.length; i++) {
