@@ -32,7 +32,7 @@ function twoSum(nums, target) {
 
   for (let i = 0; i < nums.length; i++) {
     const diff = target - nums[i];
-    if (cache.get(diff) !== undefined) return [cache.get(diff), i];
+    if (cache.has(diff)) return [cache.get(diff), i];
     cache.set(nums[i], i);
   }
 }
