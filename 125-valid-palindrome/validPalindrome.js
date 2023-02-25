@@ -20,8 +20,7 @@
 function isPalindrome(string) {
   const convertedStr = string.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
 
-  let left = 0;
-  let right = convertedStr.length - 1;
+  let [left, right] = [0, convertedStr.length - 1];
 
   while (left < right) {
     if (convertedStr[left] !== convertedStr[right]) {
