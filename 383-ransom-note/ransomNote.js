@@ -45,3 +45,5 @@ function createFrequencyCounter(string) {
 
   return counter;
 }
+
+//test
