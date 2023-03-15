@@ -24,7 +24,7 @@ function updateMatrix(mat) {
       if (mat[y][x] === 0) {
         queue.push([y, x]);
       } else {
-        result[y][x] = '?';
+        result[y][x] = null;
       }
     }
   }
@@ -49,7 +49,7 @@ function updateMatrix(mat) {
         newY < rows &&
         newX >= 0 &&
         newX < cols &&
-        result[newY][newX] === '?'
+        result[newY][newX] === null
       ) {
         result[newY][newX] = mat[y][x] + 1;
         queue.push([newY, newX]);
