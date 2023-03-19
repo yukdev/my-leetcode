@@ -21,9 +21,19 @@
  * 3. 2 steps + 1 step
  */
 // recursive solution - not making time check - revisit later
-function climbStairs(n, steps = 0) {
-  if (steps > n) return 0;
-  if (steps === n) return 1;
+function climbStairs(n) {
+  // initialize tabulation
+  const dp = new Array(n + 1).fill(0);
+  dp[1] = 1;
+  dp[2] = 2;
 
-  return climbStairs(n, steps + 1) + climbStairs(n, steps + 2);
+  //
+  for (let i = 3; i <= n; i++) {
+    const [prev, prevPrev] = [i - 1, i - 2];
+    dp[i] = dp[prev] + dp[prevPrev];
+  }
+
+  return dp[n];
 }
+
+console.log(climbStairs(5));
