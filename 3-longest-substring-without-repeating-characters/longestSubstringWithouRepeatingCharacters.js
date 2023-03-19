@@ -39,16 +39,16 @@ function lengthOfLongestSubstring(string) {
 }
 
 // alternative
-// function lengthOfLongestSubstring(s) {
+// function lengthOfLongestSubstring(string) {
 //   const chars = new Set();
 //   let [longest , left, right] = [0, 0, 0];
 
-//   while (right < s.length) {
-//     if (chars.has(s[right])) {
+//   while (right < string.length) {
+//     if (chars.has(string[right])) {
 //       chars.delete(s[left]);
 //       left += 1;
 //     } else {
-//       chars.add(s[right]);
+//       chars.add(string[right]);
 //       right += 1;
 //       longest = Math.max(longest, right - left);
 //     }
