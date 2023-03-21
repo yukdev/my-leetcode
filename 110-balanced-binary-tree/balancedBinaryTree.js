@@ -26,6 +26,7 @@ function isBalanced(root) {
       left[0] === true &&
       right[0] === true &&
       Math.abs(left[1] - right[1]) <= 1;
+
     return [isBalanced, 1 + Math.max(left[1], right[1])];
   }
 
