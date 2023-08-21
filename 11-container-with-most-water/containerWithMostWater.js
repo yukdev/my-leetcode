@@ -31,7 +31,7 @@ const maxArea = (height) => {
     const leftHeight = height[left];
     const rightHeight = height[right];
 
-    const area = Math.min(leftHeight, rightHeight) * Math.abs(left - right);
+    const area = Math.min(leftHeight, rightHeight) * (right - left);
     max = Math.max(max, area);
 
     if (leftHeight < rightHeight) {
