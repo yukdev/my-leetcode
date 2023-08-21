@@ -28,13 +28,13 @@ const maxArea = (height) => {
   let max = -Infinity;
 
   while (left < right) {
-    const leftNum = height[left];
-    const rightNum = height[right];
+    const leftHeight = height[left];
+    const rightHeight = height[right];
 
-    const area = Math.min(leftNum, rightNum) * Math.abs(left - right);
+    const area = Math.min(leftHeight, rightHeight) * Math.abs(left - right);
     max = Math.max(max, area);
 
-    if (leftNum < rightNum) {
+    if (leftHeight < rightHeight) {
       left += 1;
     } else {
       right -= 1;
